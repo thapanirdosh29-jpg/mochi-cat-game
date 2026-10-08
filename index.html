@@ -1,37 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mochi The Cat</title>
-
 <style>
 body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #ffd6e7, #fff);
-    text-align:center;
-    margin:0;
-    padding:20px;
-}
-
-.container{
-    max-width:500px;
-    margin:auto;
-}
-
-.cat{
-    font-size:120px;
-    transition:0.3s;
-}
-
-.stats{
-    background:white;
-    padding:15px;
-    border-radius:15px;
-    margin:15px 0;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+font-family:Arial;
+text-align:center;
+background:pink;
+padding:20px;
 }
 
 button{
-    padding:
-      
+padding:10px;
+margin:5px;
+font-size:18px;
+}
+
+#cat{
+font-size:100px;
+}
+</style>
+</head>
+<body>
+
+<h1>🐱 Mochi The Cat</h1>
+
+<div id="cat">😺</div>
+
+<h2>Coins: <span id="coins">100</span></h2>
+
+<button onclick="feed()">🍖 Feed</button>
+<button onclick="play()">🎾 Play</button>
+
+<p id="msg">Take care of Mochi!</p>
+
+<script>
+let coins = 100;
+
+function feed(){
+coins -= 10;
+document.getElementById("coins").innerText = coins;
+document.getElementById("msg").innerText = "Mochi loved the food!";
+}
+
+function play(){
+coins += 5;
+document.getElementById("coins").innerText = coins;
+document.getElementById("msg").innerText = "Mochi had fun!";
+}
+</script>
+
+</body>
+</html>
