@@ -48,6 +48,17 @@ coins += 5;
 document.getElementById("coins").innerText = coins;
 document.getElementById("msg").innerText = "Mochi had fun!";
 }
+  setInterval(function(){
+
+    hunger--;
+
+    if(hunger < 0){
+        hunger = 0;
+    }
+
+    document.getElementById("hunger").innerText = hunger;
+
+},5000);
 </script>
 
 </body>
