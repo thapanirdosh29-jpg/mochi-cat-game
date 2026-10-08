@@ -28,7 +28,7 @@ font-size:100px;
 <div id="cat">😺</div>
 
 <h2>Coins: <span id="coins">100</span></h2>
-
+<h2>Hunger: <span id="hunger">100</span>%</h2>
 <button onclick="feed()">🍖 Feed</button>
 <button onclick="play()">🎾 Play</button>
 
@@ -36,7 +36,7 @@ font-size:100px;
 
 <script>
 let coins = 100;
-
+let hunger = 100;
 function feed(){
 coins -= 10;
 document.getElementById("coins").innerText = coins;
